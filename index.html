@@ -138,7 +138,7 @@
 
 
         #game{
-            background:red;
+            background:black;
             position: fixed;
             left:0;
             top:0;
@@ -844,14 +844,14 @@
                     $(this).hide();
 
 
-                    $('#bg').css('opacity', 0.6);
+                    $('#bg').css('opacity', 0.6).css('background-color','red');
 
 
                     setTimeout(function(){
                         $('#roger').css('background-image', "url('static/cat.png')").removeClass('shake2');
                         is_msg = false;
 
-                        $('#bg').css('opacity', 1);
+                        $('#bg').css('opacity', 1).css('background-color','black');
 
                     }, 5000);
 
