@@ -31,9 +31,9 @@
     <link rel="prefetch" href="static/mp3/meow.mp3" />
 
     <link rel="prefetch" href="static/bg2.jpg" />
-    <link rel="prefetch" href="static/pa3.png" />
+    <link rel="prefetch" href="static/pa5.png" />
     <link rel="prefetch" href="static/bug.png" />
-    <link rel="prefetch" href="static/jamie_hands2.png" />
+    <link rel="prefetch" href="static/boom.gif" />
     <link rel="prefetch" href="static/cat.png" />
     <link rel="prefetch" href="static/cat2.png" />
 
@@ -211,11 +211,13 @@
 
 
         .roger{background:url('static/cat.png');background-size:contain;background-repeat:no-repeat;background-position:center center;width:183px;height:250px;position:fixed;bottom:0;top:50%;margin-top:-125px;left:50%;margin-left:-91px;}
-        .rice{background-size:contain;z-index:1;display:none;background:url('static/pa3.png');width:200px;height:200px;position:fixed;}
+        .rice{background-size:contain;z-index:1;display:none;background:url('static/pa5.png');width:200px;height:200px;position:fixed;}
         .jamie{background-size:contain;z-index:1;cursor:pointer;background:url('static/bug.png');background-repeat:no-repeat;background-size:100%;width:183px;height:185px;position:fixed;left:0;top:0;}
         .jamie_hands{position:absolute;width:140px;margin-left: -70px;margin-top: 210px;}
         .msg{font-family:arial;font-weight:bold;display:none;border-radius:100px;position:fixed;z-index:1;color:white;border:5px black solid;background:#da552f;font-size:50px;padding:50px 0;width:150px;text-align:center;cursor:pointer;}
         
+        .boom{background-image:url('static/boom.gif') !important;background-size:200%;background-position:center center;}
+
 
         @keyframes shake {
             0% {
@@ -774,7 +776,25 @@
                     //$('#jamie').addClass('shake');
                     //$('#hands').removeClass('shake');
 
-                    $('#jamie').hide();
+                    
+
+                    if( is_msg){
+
+                        $('#jamie').addClass('boom');
+
+                        setTimeout(function(){
+
+                            $('#jamie').hide();
+                            $('#jamie').removeClass('boom');
+
+
+                        }, 200);
+
+                    }else{
+                        $('#jamie').hide();
+                    }
+
+                    
 
                     
                     score++;
@@ -816,7 +836,7 @@
                     $(this).hide();
 
 
-                    $('#bg').css('opacity', 0.9);
+                    $('#bg').css('opacity', 0.8);
 
 
                     setTimeout(function(){
