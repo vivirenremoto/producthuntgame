@@ -433,7 +433,7 @@
         <br>
         <button onclick="startGame()" class="btn_primary">PLAY</button>
         <button onclick="showLeaderboard()"><span style="font-size:20px">🏆</span> LEADERBOARD</button>
-
+        <button onclick="showProductHunt()">VOTE PRODUCTHUNT</button>
 
         SHARE
         <br>
@@ -502,6 +502,8 @@
             <button onclick="location.reload()">TRY AGAIN</button>
             <button id="btn_save">SAVE SCORE</button>
             <button onclick="showLeaderboard()"><span style="font-size:20px">🏆</span> LEADERBOARD</button>
+            <button onclick="showProductHunt()">VOTE PRODUCTHUNT</button>
+            
 
             SHARE
             <br>
@@ -1046,7 +1048,9 @@
         }
 
 
-
+        function showProductHunt(){
+            window.open('https://www.producthunt.com/posts/product-hunt-bugbusters-game');
+        }
 
         function showLeaderboard() {
 
