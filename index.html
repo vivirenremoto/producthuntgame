@@ -491,7 +491,7 @@
 
         <br>
 
-        Bugs found<br>
+        Bugs fixed<br>
         <div id="final_score" style="color:orange;font-size:100px;line-height:90px;margin-bottom:10px;">0</div>
 
         <div id="steam_stars" style="display:none">
@@ -733,6 +733,7 @@
 
                 if( is_msg ){
                     $('#sound_attack_special')[0].currentTime = 0;
+                    //$('#sound_attack_special')[0].volume = 0.5;
                     $('#sound_attack_special')[0].play();
                 }else{
                     /*
@@ -784,7 +785,7 @@
 
                         $('#jamie').addClass('boom');
 
-                        //sound_boom.currentTime = 0;
+                        sound_boom.currentTime = 0;
                         //sound_boom.play();
 
 
