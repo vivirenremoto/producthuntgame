@@ -23,11 +23,8 @@
 
 
     <link rel="prefetch" href="static/mp3/music2.mp3" />
-    <link rel="prefetch" href="static/mp3/byebye2.mp3" />
-    <link rel="prefetch" href="static/mp3/fuckup.mp3" />
-    <link rel="prefetch" href="static/mp3/haya.mp3" />
-    <link rel="prefetch" href="static/mp3/messup.mp3" />
-    <link rel="prefetch" href="static/mp3/shit.mp3" />
+    <link rel="prefetch" href="static/mp3/cat.mp3" />
+    <link rel="prefetch" href="static/mp3/boom.mp3" />
     <link rel="prefetch" href="static/mp3/meow.mp3" />
 
     <link rel="prefetch" href="static/bg2.jpg" />
@@ -214,7 +211,7 @@
         .rice{background-size:contain;z-index:1;display:none;background:url('static/pa5.png');width:200px;height:200px;position:fixed;}
         .jamie{background-size:contain;z-index:1;cursor:pointer;background:url('static/bug.png');background-repeat:no-repeat;background-size:100%;width:183px;height:185px;position:fixed;left:0;top:0;}
         .jamie_hands{position:absolute;width:140px;margin-left: -70px;margin-top: 210px;}
-        .msg{font-family:arial;font-weight:bold;display:none;border-radius:100px;position:fixed;z-index:1;color:white;border:5px black solid;background:#da552f;font-size:50px;padding:50px 0;width:150px;text-align:center;cursor:pointer;}
+        .msg{font-family:arial;font-weight:bold;display:none;border-radius:100px;position:fixed;z-index:1;color:white;border:5px black solid;background:#da552f;font-size:70px;padding:35px 0;width:150px;text-align:center;cursor:pointer;}
         
         .boom{background-image:url('static/boom3.gif') !important;background-size:contain;background-position:center center;}
 
@@ -544,13 +541,16 @@
     <audio id="sound_attack1">
         <source src="static/mp3/cat.mp3" type="audio/mp3">
     </audio>
+    <audio id="sound_boom">
+        <source src="static/mp3/boom.mp3" type="audio/mp3">
+    </audio>
+    <!--
     <audio id="sound_attack2">
         <source src="static/mp3/byebye2.mp3" type="audio/mp3">
     </audio>
     <audio id="sound_attack3">
         <source src="static/mp3/haya.mp3" type="audio/mp3">
     </audio>
-    <!--
     <audio id="sound_attack4">
         <source src="static/mp3/messup.mp3" type="audio/mp3">
     </audio>
@@ -609,6 +609,8 @@
         var music_playing = false;
         var music = $('#music')[0];
         music.volume = 0.3;
+
+        var sound_boom = $('#sound_boom')[0];
 
 
         function randomNumber(min, max) {
@@ -781,6 +783,10 @@
                     if( is_msg){
 
                         $('#jamie').addClass('boom');
+
+                        //sound_boom.currentTime = 0;
+                        //sound_boom.play();
+
 
                         setTimeout(function(){
 
