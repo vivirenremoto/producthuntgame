@@ -844,14 +844,16 @@
                     $(this).hide();
 
 
-                    $('#bg').css('opacity', 0.6).css('background-color','red');
+                    $('#game').css('background-color', 'red');
+                    $('#bg').css('opacity', 0.6);
 
 
                     setTimeout(function(){
                         $('#roger').css('background-image', "url('static/cat.png')").removeClass('shake2');
                         is_msg = false;
 
-                        $('#bg').css('opacity', 1).css('background-color','black');
+                        $('#game').css('background-color', 'black');
+                        $('#bg').css('opacity', 1);
 
                     }, 5000);
 
